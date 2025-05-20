@@ -58,6 +58,6 @@ class Catalog:
         result = products_with_categories.select(
             col("product_name"),
             col("category_name")
-        ).distinct()
+        ).distinct().orderBy("product_name")
 
         return result
